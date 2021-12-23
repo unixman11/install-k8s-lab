@@ -1,4 +1,4 @@
-#สร้าง lab k8s แบบเร็วๆ
+#สร้าง lab k8s แบบเร็วๆ ด้วย vagrant
 1. vagrant up
 2. รอจนกว่า vm ทั้งหมดจะ provision เสร็จ
 3. vagrant ssh k8s-master แล้วสั่ง 3 comand ข้างล่าง
