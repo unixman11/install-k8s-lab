@@ -1,0 +1,15 @@
+#สร้าง lab k8s แบบเร็วๆ
+1. vagrant up
+2. รอจนกว่า vm ทั้งหมดจะ provision เสร็จ
+3. vagrant ssh k8s-master แล้วสั่ง 3 comand ข้างล่าง
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+4. cat /kub.txt แล้ว copy คำสั่ง kubeadm join...
+5. vagrant ssh k8s-worker1, vagrant ssh k8s-worker2 สั่ง kubeadm join..จากข้อ 4
+
+#note
+ทดสอบกับ vagrant_2.2.19_x86_64.msi และ VirtualBox-6.1.30-148432-Win.exe บน Windows 10
+
+#credit
+script ติดตั้ง k8s ดัดแปลงมาจาก https://github.com/supachai-j/install-k8s-ubuntu
